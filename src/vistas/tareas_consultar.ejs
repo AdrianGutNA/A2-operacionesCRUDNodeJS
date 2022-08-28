@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Consulta</title>
+    <link rel="stylesheet" href="/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand">Lista de Calificaciones</a>
+        </div>
+    </nav>
+    <div class="container">  
+        <br>   
+        <div>
+            <a href="/tareas/nuevo" class="btn btn-primary">Nuevo</a>
+            <a href="/tareas" class="btn btn-secondary">Regresar</a>
+        </div>
+        <br>
+        <div>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">idActividades</th>
+                        <th scope="col">idMatricula</th>
+                        <th scope="col">Calificacion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%
+                    for(var i=0; i<reg.length; i++)
+                    {
+                    %>
+                    <tr>
+                        <td><%=reg[i].idActividades%></td>
+                        <td><%=reg[i].idMatricula%></td>
+                        <td><%=reg[i].Calificacion%></td>
+                    </tr>
+                    <%}%>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluacion</title>
+    <link rel="stylesheet" href="/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand">Evaluacion</a>
+        </div>
+    </nav>
+    <div class="container">    
+        <br>
+        <div class="row justify-content-md-center">
+            <div class="col-6">
+
+                
+                <form action="/tareas/agregarC" method="post">
+                    <div class="form-group">
+                        <label for="Actividad" class="control-label">Actividad: <%=reg[0].actividad%></label>
+                       
+                    </div>    
+
+                    <div class="form-group"> 
+                        <label class="control-label">Categoria: <%=reg[0].categoria%></label>
+                    </div>  
+
+                    <div class="form-group"> 
+                        <table class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">
+                                        <label for="Matrii" class="control-label">Matriculas</label>
+                                    </th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Apellidos</th>
+                                    <th scope="col">
+                                        <label for="Calif" class="control-label">Calificacion</label>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <%
+                                    for(var i=0; i<reg.length; i++)
+                                    {
+                                %>
+                                <tr>
+                                    <td>
+                                        <input type="hidden" class="form-control" name="tfidActividades" value="<%=reg[i].id%>">
+                                        <label class="control-label"><%=reg[i].Matricula%></label>
+                                        <input type="hidden" class="form-control" name="tfidMatricula" value="<%=reg[i].Matricula%>">
+                                    </td>
+                                    <td>
+                                        <label class="control-label"><%=reg[i].Nombre%></label>
+                                    </td>
+                                    <td>
+                                        <label class="control-label"><%=reg[i].Apellidos%></label>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control" name="tfCalificacion">
+                                    </td>
+                                </tr>  
+                                <%}%>                           
+                            </tbody>
+                        </table>
+                    </div> 
+                    
+                    <div class="form-group">
+                        <input type="submit" name="accion" value="Califiacar" class="btn btn-primary">
+                        <a href="/tareas" class="btn btn-secondary">Regresar</a>
+                    </div>     
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/bootstrap.bundle.min.js"></script>
+</body>
+</html>
