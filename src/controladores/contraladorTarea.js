@@ -26,7 +26,18 @@ controlador.consultar = (req, res) => {
 };
 
 controlador.nuevo = (req, res) => {
-    res.render("tareas/tareas_nuevo.ejs");
+    req.getConnection((err, conn) => {
+        if (err)
+            throw err;
+        else {
+            conn.query("SELECT * FROM porcentajes", (error, resultados) => {
+                if (error)
+                    res.json(error);
+                else
+                    res.render("tareas/tareas_nuevo.ejs", { data: resultados });
+            });
+        }
+    });
 };
 
 controlador.calificar = (req, res) => {
@@ -82,9 +93,12 @@ controlador.editar = (req, res) => {
     const matri = req.params.Matri;
 
     req.getConnection((err, conn) => {
-        conn.query("SELECT * FROM actividades WHERE id=?", [matri], (error, fila) => {
-            res.render("tareas/tareas_editar.ejs", { reg: fila });
-        });
+        conn.query("SELECT * FROM porcentajes", (error, resultados) => {
+
+            conn.query("SELECT * FROM actividades WHERE id=?", [matri], (error, fila) => {
+                res.render("tareas/tareas_editar.ejs", { reg: fila, data: resultados });
+            });
+        })
     });
 };
 

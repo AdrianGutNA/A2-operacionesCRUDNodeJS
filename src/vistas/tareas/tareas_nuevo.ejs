@@ -42,6 +42,7 @@
 
                 </div>
                 <div class="col-5">
+
                     <form action="/tareas/agregar" method="post">
                         <div class="form-group">
                             <label for="full_name_id" class="control-label">Actividad:</label>
@@ -49,8 +50,18 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="street2_id" class="control-label">Categoria</label>
-                            <input type="text" class="form-control" name="tfCategoria">
+                            <label for="exampleFormControlSelect1">Categoria</label>
+                            <select name="tfCategoria" class="form-control">
+                                <option selected>Ver Categorias...</option>
+                                <%    
+                                for(var i=0; i<data.length; i++)
+                                {     
+                            %>
+                                <option value="<%=data[i].descripcion%>">
+                                    <%=data[i].descripcion%>
+                                </option>
+                                <% } %>
+                            </select>
                         </div>
 
                         <div class="form-group">
