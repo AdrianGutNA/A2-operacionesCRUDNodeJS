@@ -1,0 +1,16 @@
+#contenedor
+{
+    width: 1200px;
+    margin: auto;
+}
+
+#main
+{
+    height: 500px;
+}
+
+#btnRegistrar
+{
+    margin-top: 200px;
+    margin-left: 50px;
+}

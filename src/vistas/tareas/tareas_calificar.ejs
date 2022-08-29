@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calificar Actividad</title>
+    <link rel="shortcut icon" href="/libreta.ico" />
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/styleActividades.css">
+    <link rel="stylesheet" href="/bootstrap.min.css">
+    <link rel="stylesheet" href="/bootstrap.min.css">
+</head>
+
+<body>
+    <div id="contenedor">
+
+        <nav class="navbar navbar-dark bg-dark" id="navBar">
+            <a class="navbar-brand">
+                <div class="row">
+                    <div class="col-1">
+                        <img src="/icono.png">
+                    </div>
+                    <div class="col">
+                        <h5>Actidad 2 - Operaciones CRUD - Actividades</h5>
+                    </div>
+                </div>
+            </a>
+        </nav>
+
+        <div id="main">
+            <div class="row">
+                <div class="col-4" id="referencias2">
+
+                    <h3>
+                        Actividad:
+                        <%=reg[0].actividad%>
+                    </h3>
+
+                    <br>
+
+                    <h3>
+                        Categoria:
+                        <%=reg[0].categoria%>
+                    </h3>
+                    <a href="/tareas" class="btn btn-outline-dark btnAtras">Regresar</a>
+
+                </div>
+                <div class="col-5">
+                    <form action="/tareas/agregarC" method="post">
+
+                        <div class="form-group">
+                            <table class="table">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">
+                                            <label for="Matrii" class="control-label">Matriculas</label>
+                                        </th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Apellidos</th>
+                                        <th scope="col">
+                                            <label for="Calif" class="control-label">Calificacion</label>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <%
+                                for(var i=0; i<reg.length; i++)
+                                {
+                            %>
+                                        <tr>
+                                            <td>
+                                                <input type="hidden" class="form-control" name="tfidActividades" value="<%=reg[i].id%>">
+                                                <label class="control-label"><%=reg[i].Matricula%></label>
+                                                <input type="hidden" class="form-control" name="tfidMatricula" value="<%=reg[i].Matricula%>">
+                                            </td>
+                                            <td>
+                                                <label class="control-label"><%=reg[i].Nombre%></label>
+                                            </td>
+                                            <td>
+                                                <label class="control-label"><%=reg[i].Apellidos%></label>
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control" name="tfCalificacion">
+                                            </td>
+                                        </tr>
+                                        <%}%>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" name="accion" value="Califiacar" class="btn btn-primary">
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <footer>
+            <div class="row">
+                <div class="col-3">
+                    <img src="/icono.png">
+                    <img src="/UTlogo.png">
+                </div>
+                <div class="col">
+                    <h4>Actidad 2 - Operaciones CRUD - Actividades</h4>
+                </div>
+            </div>
+
+            <div id="lineaFooter"></div>
+            <p class="font-italic">actividad 2 - ©copyright</p>
+        </footer>
+    </div>
+    <script src="/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

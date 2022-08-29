@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Mostrar Actividades</title>
+    <link rel="shortcut icon" href="/libreta.ico" />
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/styleActividades.css">
+    <link rel="stylesheet" href="/bootstrap.min.css">
+</head>
+
+<body>
+    <div id="contenedor">
+
+        <nav class="navbar navbar-dark bg-dark" id="navBar">
+            <a class="navbar-brand">
+                <div class="row">
+                    <div class="col-1">
+                        <img src="/icono.png">
+                    </div>
+                    <div class="col">
+                        <h5>Actidad 2 - Operaciones CRUD - Actividades</h5>
+                    </div>
+                </div>
+            </a>
+        </nav>
+
+        <div id="main">
+
+            <div class="row" id="referencias">
+
+                <div class="col-2">
+                    <h3>
+                        Actividades
+                    </h3>
+
+                    <a href="/" class="btn btn-outline-dark btnAtras">Regresar</a>
+
+                </div>
+
+                <div class="col-7">
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Actividad</th>
+                                <th scope="col">Categoria</th>
+                                <th colspan="4" scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <%
+                    for(var i=0; i<data.length; i++)
+                    {
+                    %>
+                                <tr>
+                                    <td>
+                                        <%=data[i].actividad%>
+                                    </td>
+                                    <td>
+                                        <%=data[i].categoria%>
+                                    </td>
+                                    <td><a href="/tareas/calificar/<%=data[i].id%>" class="btn btn-success">Calificar</a></td>
+                                    <!--<td><a href="/tareas/consultar/<%=data[i].id%>" class="btn btn-info">Consultar</a></td>-->
+                                    <td><a href="/tareas/editar/<%=data[i].id%>" class="btn btn-warning">Editar</a></td>
+                                    <td><a href="/tareas/eliminar/<%=data[i].id%>" class="btn btn-danger">Eliminar</a></td>
+                                </tr>
+                                <%}%>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-1">
+                    <div id="btnRegistrar">
+                        <a href="/tareas/nuevo" class="btn btn-success">Registrar Actividad</a>
+                    </div>
+                </div>
+                <br>
+                <div>
+
+
+                </div>
+                <br>
+                <div>
+
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="row">
+                <div class="col-3">
+                    <img src="/icono.png">
+                    <img src="/UTlogo.png">
+                </div>
+                <div class="col">
+                    <h4>Actidad 2 - Operaciones CRUD - Actividades</h4>
+                </div>
+            </div>
+
+            <div id="lineaFooter"></div>
+            <p class="font-italic">actividad 2 - ©copyright</p>
+        </footer>
+
+    </div>
+    <script src="/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

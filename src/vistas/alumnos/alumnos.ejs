@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Mostrar Alumnos</title>
+    <link rel="shortcut icon" href="/libreta.ico" />
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/styleAlumnos.css">
+    <link rel="stylesheet" href="/bootstrap.min.css">
+</head>
+
+<body>
+    <div id="contenedor">
+
+        <nav class="navbar navbar-dark bg-dark" id="navBar">
+            <a class="navbar-brand">
+                <div class="row">
+                    <div class="col-1">
+                        <img src="/icono.png">
+                    </div>
+                    <div class="col">
+                        <h5>Actidad 2 - Operaciones CRUD - Alumnos</h5>
+                    </div>
+                </div>
+            </a>
+        </nav>
+
+        <div id="main">
+            <div class="row" id="referencias">
+                <div class="col-2">
+                    <h3>
+                        Alumnos:
+                    </h3>
+
+                    <a href="/" class="btn btn-outline-dark btnAtras">Regresar</a>
+
+                </div>
+
+                <div class="col-7">
+                    <table class="table" id="tabla">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Matricula</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Apellidos</th>
+                                <th colspan="2" scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <%
+                    for(var i=0; i<data.length; i++)
+                    {
+                    %>
+                                <tr>
+                                    <th scope="row">
+                                        <%=data[i].Matricula%>
+                                    </th>
+                                    <td>
+                                        <%=data[i].Nombre%>
+                                    </td>
+                                    <td>
+                                        <%=data[i].Apellidos%>
+                                    </td>
+                                    <td><a href="/alumnos/editar/<%=data[i].Matricula%>" class="btn btn-warning">Editar</a></td>
+                                    <td><a href="/alumnos/eliminar/<%=data[i].Matricula%>" class="btn btn-danger">Eliminar</a></td>
+                                </tr>
+                                <%}%>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col-1">
+                    <div id="btnRegistrar">
+                        <a href="/alumnos/nuevo" class="btn btn-success">Registrar Alumno</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <footer>
+            <div class="row">
+                <div class="col-3">
+                    <img src="/icono.png">
+                    <img src="/UTlogo.png">
+                </div>
+                <div class="col">
+                    <h4>Actidad 2 - Operaciones CRUD - Alumnos</h4>
+                </div>
+            </div>
+
+            <div id="lineaFooter"></div>
+            <p class="font-italic">actividad 2 - ©copyright</p>
+        </footer>
+
+    </div>
+    <script src="/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

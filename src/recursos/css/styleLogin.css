@@ -1,0 +1,16 @@
+#contenedor
+{
+    width: 1200px;
+    margin: auto;
+}
+#main
+{
+    height: 500px;
+}
+
+#imgSesion img
+{
+    margin-left: 80px;
+    margin-top: 80px;
+    width: 500px;
+}

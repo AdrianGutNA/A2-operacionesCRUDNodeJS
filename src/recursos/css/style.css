@@ -1,0 +1,109 @@
+#navBar img
+{
+    height: 40px;
+    width: 40px;
+    margin-left: 10px;
+}
+
+#navBar h5
+{
+    margin-left: 40%;
+    margin-top: 5px;
+    color: #EBEBEB;
+}
+
+
+
+#enlaces
+{
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-bottom: 40px;
+}
+
+#referencias
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#referencias h3
+{
+    margin-left: 20px;
+}
+
+#referencias2 h3
+{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.btnAtras
+{
+    margin-top: 150px;
+    margin-left: 40px;
+}
+
+.btnAtrasAsignar{
+    margin-top: 150px;
+    margin-left: 40px;
+}
+
+.btnAsignarCal{
+    margin-left: 40px;
+}
+.btnGuardar
+{
+    margin-top: 20px;
+}
+
+#tabla
+{
+    margin: auto;
+    width: 600px;
+    height: 400px;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+form
+{
+    margin-top: 20px;
+}
+footer
+{
+    height: 130px;
+    margin-top: 20px;
+    background-color: #898E8C;
+}
+
+#lineaFooter
+{
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 3px;
+    width: 80%;
+    background-color: #FFFFFF;
+}
+
+footer img
+{
+    height: 60px;
+    width: 60px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+footer h4
+{
+    margin-left: 5px;
+    margin-top: 40px;
+    color: #EBEBEB;
+}
+
+footer p
+{
+    text-align: center;
+}

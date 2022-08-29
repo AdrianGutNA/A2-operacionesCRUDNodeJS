@@ -1,0 +1,48 @@
+#contenedor
+{
+    width: 1200px;
+    margin: auto;
+}
+
+#mainIndex
+{
+    height: 400px;
+}
+
+#menuIndex{
+    margin: auto;
+    margin-top: 110px;
+    width: 1000px;
+    align-items: center;
+}
+
+#menuIndex img
+{
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#tablaActividades
+{
+    margin: auto;
+    width: 500px;
+    height: 400px;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 80px;
+}
+
+#btnRegistrar
+{
+    margin-top: 200px;
+}
+
+.caja{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+.btnIndexMenu{
+    margin-left: 20%;
+}

@@ -12,11 +12,11 @@ var datosBD = {
     user: "root",
     password: "",
     port: "3306",
-    database: "db"
+    database: "actividad2"
 };
 
 
-servidor.set("puerto", 5000);
+servidor.set("puerto", 3000);
 servidor.set("view engine", "ejs");
 servidor.set("views", path.join(__dirname, "./src/vistas"));
 servidor.engine("html", ejs.renderFile);
@@ -33,6 +33,7 @@ servidor.use("/porcentajes", require("./src/rutas/porcentajes.js"));
 
 servidor.use(express.static("./src/recursos/css"));
 servidor.use(express.static("./src/recursos/js"));
+servidor.use(express.static("./src/recursos/img"));
 
 servidor.listen(servidor.get("puerto"), function() {
     console.log("Servidor express escuchando por el puerto: ", servidor.get("puerto"));

@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        Vista Principal
+        Login
     </title>
     <link rel="shortcut icon" href="/libreta.ico" />
     <link rel="stylesheet" href="/bootstrap.min.css">
-    <link rel="stylesheet" href="/styleInicio.css">
+    <link rel="stylesheet" href="/styleLogin.css">
     <link rel="stylesheet" href="/style.css">
 </head>
 
@@ -32,46 +32,33 @@
             </nav>
         </header>
 
-        <div id="mainIndex">
-            <div class="row" id="menuIndex">
-                <div class="col">
-                    <div class="card" style="width: 14rem;">
-                        <img src="/alumno.png">
-
-                        <div class="card-body">
-                            <a href="/alumnos" class="btn btn-outline-dark btnIndexMenu">Alumnos</a>
-                        </div>
-
+        <div id="main">
+            <div class="row">
+                <div class="col-6">
+                    <div id="imgSesion">
+                        <img src="./publico/img/alumnos.png">
                     </div>
                 </div>
-                <div class="col-1"></div>
-                <div class="col">
-                    <div class="card" style="width: 14rem;">
-                        <img src="/libreta.jpg">
-
-                        <div class="card-body">
-                            <a href="/tareas" class="btn btn-outline-dark btnIndexMenu">Actividades</a>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-1"></div>
-                <div class="col">
-                    <div class="card" style="width: 14rem;">
-                        <img src="/porcentaje.png">
-
-                        <div class="card-body">
-                            <a href="/porcentajes" class="btn btn-outline-dark btnIndexMenu">Porcentajes</a>
-                        </div>
-
+                <div class="col-4">
+                    <div>
+                        <br>
+                        <h5>Iniciar Sesión</h5>
+                        <br>
+                        <form>
+                            <div class="form-group">
+                                <label>Usuario</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Contraseña</label>
+                                <input type="password" class="form-control">
+                            </div>
+                            <br>
+                            <button type="submit" class="btn btn-primary">Iniciar</button>
+                        </form>
                     </div>
                 </div>
             </div>
-
-
-            <button type="submit" name="accion" value="cerrarSesion" class="btn btn-outline-dark">Regresar</button>
-
-
         </div>
 
         <footer>

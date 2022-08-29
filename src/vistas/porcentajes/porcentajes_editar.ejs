@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Porcentajes</title>
+
+    <link rel="shortcut icon" href="/libreta.ico" />
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/stylePorcentajes.css">
+    <link rel="stylesheet" href="/bootstrap.min.css">
+</head>
+
+<body>
+    <%
+    var total = 0;
+for(var i=0; i<data.length; i++)
+{
+    total = total + data[i].porcentaje;
+}
+%>
+        <div id="contenedor">
+
+            <nav class="navbar navbar-dark bg-dark" id="navBar">
+                <a class="navbar-brand">
+                    <div class="row">
+                        <div class="col-1">
+                            <img src="/icono.png">
+                        </div>
+                        <div class="col">
+                            <h5>Actidad 2 - Operaciones CRUD - Porcentajes</h5>
+                        </div>
+                    </div>
+                </a>
+            </nav>
+
+            <div id="main">
+                <div class="row">
+                    <div class="col-4" id="referencias2">
+
+                        <h3>
+                            Editar Porcentaje:
+                        </h3>
+
+                        <br>
+                        <a href="/porcentajes" class="btn btn-outline-dark btnAtras">Regresar</a>
+
+                    </div>
+                    <div class="col-5">
+                        <form action="/porcentajes/actualizar/<%=reg[0].id%>" method="post">
+
+                            <div class="form-group">
+                                <label for="street1_id" class="control-label">Descripcion: </label>
+                                <input type="text" class="form-control" name="tfDescripcion" value="<%=reg[0].descripcion%>">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="street2_id" class="control-label">Porcentaje</label>
+                                <input type="text" class="form-control" name="tfPorcentaje" value="<%=reg[0].porcentaje%>">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="submit" name="accion" value="Actualizar" class="btn btn-primary">
+
+                            </div>
+
+                        </form>
+                        <br><br>
+                        <h4>Porcentaje ya asignado:
+                            <%=total  - reg[0].porcentaje%>%</h4>
+                        <br>
+                        <h5>Prcentaje asignable: hasta
+                            <%=100 - (total - reg[0].porcentaje)%>%</h5>
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                <div class="row">
+                    <div class="col-3">
+                        <img src="/icono.png">
+                        <img src="/UTlogo.png">
+                    </div>
+                    <div class="col">
+                        <h4>Actidad 2 - Operaciones CRUD - Porcentajes</h4>
+                    </div>
+                </div>
+
+                <div id="lineaFooter"></div>
+                <p class="font-italic">actividad 2 - ©copyright</p>
+            </footer>
+        </div>
+        <script src="/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
