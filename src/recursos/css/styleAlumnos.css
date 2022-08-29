@@ -1,37 +1,36 @@
-#contenedor
-{
+#contenedor {
     width: 1200px;
     margin: auto;
 }
 
-#main
-{
+#main {
     height: 500px;
 }
 
-#btnRegistrar
-{
+#btnRegistrar {
     margin-top: 200px;
     margin-left: 50px;
 }
 
-#tablasCalif
-{
+#tablasCalif {
     height: 470px;
     margin-left: 50px;
     margin-top: 20px;
     overflow-y: scroll;
 }
 
-.btnAtrasAlumnos
-{
+.btnAtrasAlumnos {
     margin-top: 60px;
     margin-left: 50px;
 }
 
-#tablaCalifAlumnos 
-{
+#tablaCalifAlumnos {
     width: 700px;
     font-size: 12px;
     margin-top: -13px;
+}
+
+.cuadroAlumnos {
+    height: 500px;
+    overflow-y: scroll;
 }

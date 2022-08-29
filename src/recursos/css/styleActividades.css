@@ -1,16 +1,18 @@
-#contenedor
-{
+#contenedor {
     width: 1200px;
     margin: auto;
 }
 
-#main
-{
+#main {
     height: 500px;
 }
 
-#btnRegistrar
-{
+#btnRegistrar {
     margin-top: 200px;
     margin-left: 50px;
+}
+
+.cuadroActividades {
+    height: 500px;
+    overflow-y: scroll;
 }

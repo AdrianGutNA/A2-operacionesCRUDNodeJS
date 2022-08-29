@@ -40,36 +40,39 @@
                 </div>
 
                 <div class="col-7">
-                    <table class="table" id="tabla">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th scope="col">Matricula</th>
-                                <th scope="col">Nombre</th>
-                                <th scope="col">Apellidos</th>
-                                <th colspan="2" scope="col">Acciones</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <%
-                    for(var i=0; i<data.length; i++)
-                    {
-                    %>
+                    <div class="cuadroAlumnos">
+
+                        <table class="table" id="tabla">
+                            <thead class="thead-dark">
                                 <tr>
-                                    <th scope="row">
-                                        <%=data[i].Matricula%>
-                                    </th>
-                                    <td>
-                                        <%=data[i].Nombre%>
-                                    </td>
-                                    <td>
-                                        <%=data[i].Apellidos%>
-                                    </td>
-                                    <td><a href="/alumnos/editar/<%=data[i].Matricula%>" class="btn btn-warning">Editar</a></td>
-                                    <td><a href="/alumnos/eliminar/<%=data[i].Matricula%>" class="btn btn-danger">Eliminar</a></td>
+                                    <th scope="col">Matricula</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Apellidos</th>
+                                    <th colspan="2" scope="col">Acciones</th>
                                 </tr>
-                                <%}%>
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                                <%
+                        for(var i=0; i<data.length; i++)
+                        {
+                        %>
+                                    <tr>
+                                        <th scope="row">
+                                            <%=data[i].Matricula%>
+                                        </th>
+                                        <td>
+                                            <%=data[i].Nombre%>
+                                        </td>
+                                        <td>
+                                            <%=data[i].Apellidos%>
+                                        </td>
+                                        <td><a href="/alumnos/editar/<%=data[i].Matricula%>" class="btn btn-warning">Editar</a></td>
+                                        <td><a href="/alumnos/eliminar/<%=data[i].Matricula%>" class="btn btn-danger">Eliminar</a></td>
+                                    </tr>
+                                    <%}%>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
 
                 <div class="col-1">
